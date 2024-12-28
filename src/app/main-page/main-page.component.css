@@ -112,19 +112,25 @@ article {
   padding-inline-end: var(--spacing-200);
 }
 
-.nutrition h1, p {
+.nutrition h1, .nutrition p {
   margin-block-end: var(--spacing-300);
 }
 
 .nutrition table {
   inline-size: 100%;
-  padding-inline: var(--spacing-400);
   border-collapse: collapse;
 }
 
 .nutrition td {
+  padding: var(--spacing-150) var(--spacing-400);
+}
+
+.nutrition tr td:first-of-type {
+  color: var(--stone-600);
+}
+
+.nutrition tr td:last-of-type {
   color: var(--brown-800);
-  line-height: 2.5;
 }
 
 .nutrition table tr:not(:first-child):not(:last-child) td {
