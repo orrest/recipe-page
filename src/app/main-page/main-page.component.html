@@ -1,0 +1,62 @@
+<main>
+  <section class="cover">
+    <img src="image-omelette.jpeg" width="1312" height="600" alt="omelette">
+  </section>
+  <article>
+    <section class="title">
+      <h1 class="text-preset-1">{{ title }}</h1>
+      <p class="text-preset-4">{{ intro }}</p>
+    </section>
+    <section class="preparation">
+      <h1 class="text-preset-3">Preparation time</h1>
+      <ul>
+        @for (preparationItem of preparationTime; track $index) {
+        <li>
+          <p>
+            <span class="text-preset-4-bold">{{preparationItem[0]}}: </span>
+            <span class="text-preset-4">{{preparationItem[1]}}</span>
+          </p>
+        </li>
+        }
+      </ul>
+    </section>
+    <section class="ingredients">
+      <h1 class="text-preset-2">Ingredients</h1>
+      <ul>
+        @for (ingredientItem of ingredients; track $index) {
+        <li>
+          <p class="text-preset-4">{{ingredientItem}}</p>
+        </li>
+        }
+      </ul>
+    </section>
+    <hr>
+    <section class="instructions">
+      <h1 class="text-preset-2">Instructions</h1>
+      <ol>
+        @for (instructionItem of instructions; track $index) {
+        <li class="text-preset-4-bold">
+          <span>
+            <span class="text-preset-4-bold">{{instructionItem[0]}}: </span>
+            <span class="text-preset-4">{{instructionItem[1]}}</span>
+          </span>
+        </li>
+        }
+      </ol>
+    </section>
+    <hr>
+    <section class="nutrition">
+      <h1 class="text-preset-2">Nutrition</h1>
+      <p class="text-preset-4">{{ nutrition }}</p>
+      <table>
+        @for (nutritionRow of nutritionRows; track $index) {
+        <tr>
+          <td class="text-preset-4">{{nutritionRow[0]}}</td>
+          <td class="text-preset-4-bold">{{nutritionRow[1]}}</td>
+        </tr>
+        }
+      </table>
+    </section>
+    <div></div>
+  </article>
+</main>
