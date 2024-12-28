@@ -120,17 +120,15 @@ article {
   inline-size: 100%;
   padding-inline: var(--spacing-400);
   border-collapse: collapse;
-
 }
 
 .nutrition td {
   color: var(--brown-800);
-  border-block-end: 1px solid var(--stone-150);
   line-height: 2.5;
 }
 
-.nutrition tr:last-of-type td {
-  border-block-end: transparent
+.nutrition table tr:not(:first-child):not(:last-child) td {
+  border-block: 1px solid var(--stone-150);
 }
 
 div {
